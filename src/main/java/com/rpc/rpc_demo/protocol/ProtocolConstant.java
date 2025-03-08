@@ -9,15 +9,15 @@ public class ProtocolConstant {
     /**
      * 消息头长度
      */
-    private int MESSAGE_HEADER_LENGTH= 17;
+    public static int MESSAGE_HEADER_LENGTH = 17;
 
     /**
      * 魔数
      */
-    private byte PROTOCOL_MAGIC = 0x01;
+    public static byte PROTOCOL_MAGIC = 0x01;
 
     /**
      * 协议版本
      */
-    private byte PROTOCOL_VERSION = 0x01;
+    public static byte PROTOCOL_VERSION = 0x01;
 }
