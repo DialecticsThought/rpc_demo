@@ -1,7 +1,7 @@
 package com.rpc.rpc_demo.config;
 
 import com.rpc.rpc_demo.registry.RegistryType;
-import com.yunfei.rpc.registry.RegistryKeys;
+
 import lombok.Data;
 
 /**

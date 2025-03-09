@@ -1,4 +1,4 @@
-package com.rpc.rpc_demo.protocol;
+package com.rpc.rpc_demo.communication.protocol;
 
 import lombok.Getter;
 

@@ -1,7 +1,11 @@
 package com.rpc.rpc_demo.config;
 
 
+import com.rpc.rpc_demo.fault.retry.RetryStrategyIdentifier;
+import com.rpc.rpc_demo.fault.tolerant.TolerantStrategyIdentifier;
+import com.rpc.rpc_demo.loadbalancer.LoadBalancerIdentifier;
 import com.rpc.rpc_demo.serializer.SerializerType;
+import lombok.Data;
 
 /**
  * @author jiahao.liu
@@ -50,16 +54,16 @@ public class RpcConfig {
     /**
      * 负载均衡器
      */
-    private String loadBalancer = LoadBalancerKeys.ROUND_ROBIN;
+    private String loadBalancer = LoadBalancerIdentifier.ROUND_ROBIN;
 
     /**
      * 重试策略
      */
-    private String retryStrategy = RetryStrategyKeys.NO;
+    private String retryStrategy = RetryStrategyIdentifier.NO;
 
     /**
      * 容错策略
      */
-    private String tolerantStrategy = TolerantStrategyKeys.FAIL_FAST;
+    private String tolerantStrategy = TolerantStrategyIdentifier.FAIL_FAST;
 }
 

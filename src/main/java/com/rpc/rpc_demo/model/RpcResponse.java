@@ -19,7 +19,7 @@ public class RpcResponse  implements Serializable {
     private Object data;
 
     /**
-     * 响应数据类型(预留)
+     * 响应数据类型(预留) 如果是让服务提供方调用方法，那么方法返回类型就是数据响应类型
      */
     private Class<?> dataType;
 

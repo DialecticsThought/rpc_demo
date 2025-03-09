@@ -1,12 +1,17 @@
-package com.rpc.rpc_demo.protocol;
+package com.rpc.rpc_demo.communication.protocol;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author jiahao.liu
  * @description
  * @date 2025/03/08 19:35
  */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ProtocolMessage<T> {
     /**
      * 消息头
@@ -20,6 +25,7 @@ public class ProtocolMessage<T> {
 
     /**
      * 协议消息头
+     * 和RpcConstant.MESSAGE_HEADER_LENGTH = 17; 关联
      */
     @Data
     public static class Header {

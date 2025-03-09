@@ -1,4 +1,4 @@
-package com.rpc.rpc_demo.protocol;
+package com.rpc.rpc_demo.communication.protocol;
 
 /**
  * @author jiahao.liu
@@ -7,7 +7,7 @@ package com.rpc.rpc_demo.protocol;
  */
 public class ProtocolConstant {
     /**
-     * 消息头长度
+     * 消息头长度 这个消息头长度与消息头的定义有关 ，如果定义出现变化 这个长度需要改
      */
     public static int MESSAGE_HEADER_LENGTH = 17;
 
