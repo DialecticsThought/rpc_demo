@@ -13,53 +13,35 @@ import java.util.concurrent.ConcurrentHashMap;
  * @description
  * @date 2025/03/08 17:49
  */
-public class LocalRegistry implements Registry {
-
+public class LocalRegistry {
     /**
      * 注册信息存储
      */
-    private  Map<String, Class<?>> map;
+    private static final Map<String, Class<?>> map = new ConcurrentHashMap<>();
 
-    public LocalRegistry() {
-        init(null);
+    /**
+     * 注册服务
+     * @param serviceName
+     * @param implClass
+     */
+    public static void register(String serviceName,Class<?> implClass){
+        map.put(serviceName,implClass);
     }
 
     /**
-     * 本地内存 不需要registryConfig
-     * @param registryConfig
+     * 获取服务
+     * @param serviceName
+     * @return
      */
-    @Override
-    public void init(RegistryConfig registryConfig) {
-        map = new ConcurrentHashMap<>();
+    public static Class<?> get (String serviceName){
+        return map.get(serviceName);
     }
 
-    @Override
-    public void register(ServiceMetaData serviceMetaInfo) throws Exception {
-
-    }
-
-    @Override
-    public void unRegister(ServiceMetaData serviceMetaData) {
-
-    }
-
-    @Override
-    public List<ServiceMetaData> serviceDiscovery(String serviceIdentifier) {
-        return List.of();
-    }
-
-    @Override
-    public void destroy() {
-
-    }
-
-    @Override
-    public void heartbeat() {
-
-    }
-
-    @Override
-    public void watch(String serviceNodeIdentifier) {
-
+    /**
+     * 删除服务
+     * @param serviceName
+     */
+    public static void remove(String serviceName){
+        map.remove(serviceName);
     }
 }
