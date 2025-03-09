@@ -17,7 +17,7 @@ public interface RetryStrategy {
      * <p>
      * 如果重试成功,则返回调用结果 RpcResponse。如果重试失败,则抛出异常
      *
-     * @param callable 重试的方法 代表一个任务
+     * @param callable 重试的方法 代表一个任务  本质这个任务就是发请求
      * @return
      * @throws Exception
      */

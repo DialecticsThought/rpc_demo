@@ -20,7 +20,7 @@ public class VertxTcpServer implements HttpServer {
         NetServer tcpServer = vertx.createNetServer();
         // 处理连接请求
         // 主要涉及半包、粘包等问题的处理
-        tcpServer.connectHandler();
+        tcpServer.connectHandler(new TcpServerHandler());
         // 启动TCP服务器并监听指定端口
         tcpServer.listen(port, result -> {
             if(result.succeeded()) {

@@ -1,0 +1,3 @@
+roundRobin=com.rpc.rpc_demo.loadbalancerRoundRobinLoadBalancer
+random=com.rpc.rpc_demo.loadbalancerRandomLoadBalancer
+consistentHash=com.rpc.rpc_demo.loadbalancerConsistentHashLoadBalancer

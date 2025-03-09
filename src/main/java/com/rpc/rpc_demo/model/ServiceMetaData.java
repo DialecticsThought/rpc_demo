@@ -1,14 +1,16 @@
 package com.rpc.rpc_demo.model;
 import cn.hutool.core.util.StrUtil;
+import lombok.Data;
 
 /**
  * @author jiahao.liu
  * @description
  * @date 2025/03/08 17:28
  */
+@Data
 public class ServiceMetaData {
     /**
-     * 服务名称
+     * 服务名称 一般是方法名字
      */
     private String serviceName;
 
@@ -49,7 +51,7 @@ public class ServiceMetaData {
 
     /**
      * 获取服务节点键名
-     *  eg:serviceName:serviceVersion:serviceHost:servicePort
+     *  eg:serviceName:serviceVersion/serviceHost:servicePort
      */
     public String getServiceNodeIdentifier() {
         return String.format("%s/%s:%s", getServiceIdentifier(), serviceHost,servicePort);

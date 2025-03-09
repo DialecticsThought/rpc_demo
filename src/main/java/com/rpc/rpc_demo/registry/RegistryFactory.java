@@ -10,7 +10,7 @@ import com.rpc.rpc_demo.spi.SPILoader;
  */
 public class RegistryFactory {
     static {
-        // 本质是 META-INF 有一个名字Registry.class)为全类名的文件
+        // 本质是 META-INF 有一个名字Registry.class为全类名的文件
         // 里面每一个是key=value key是标识符，value是注册中心的实现的全类名
         SPILoader.load(Registry.class);
     }

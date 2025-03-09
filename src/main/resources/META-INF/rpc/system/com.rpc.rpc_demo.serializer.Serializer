@@ -1,0 +1,6 @@
+jdk=com.rpc.rpc_demo.serializer.impl.JDKSerializer
+json=com.rpc.rpc_demo.serializer.impl.JSONSerializer
+hessian=com.rpc.rpc_demo.serializer.impl.HessianSerializer
+kryo=com.rpc.rpc_demo.serializer.impl.KryoSerializer
+protostuff=com.rpc.rpc_demo.serializer.impl.ProtostuffSerializer
+
