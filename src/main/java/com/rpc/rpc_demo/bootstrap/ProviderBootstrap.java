@@ -8,7 +8,7 @@ import com.rpc.rpc_demo.model.ServiceMetaData;
 import com.rpc.rpc_demo.model.ServiceRegistrationMetaData;
 import com.rpc.rpc_demo.registry.Registry;
 import com.rpc.rpc_demo.registry.RegistryFactory;
-import com.rpc.rpc_demo.registry.impl.LocalRegistry;
+import com.rpc.rpc_demo.registry.LocalRegistry;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
@@ -24,6 +24,9 @@ public class ProviderBootstrap {
 
     /**
      * 初始化
+     * TODO 查看 coreProviderExample 类
+     *
+     * @param serviceRegisterInfoList
      */
     public static void init(List<ServiceRegistrationMetaData<?>> serviceRegisterInfoList) {
         // RPC上下文初始化
@@ -33,7 +36,7 @@ public class ProviderBootstrap {
 
         // 遍历传入的 ServiceRegisterInfo 列表,获取服务名和服务实现类
         for (ServiceRegistrationMetaData<?> serviceRegistrationMetaData : serviceRegisterInfoList) {
-            // 得到服务名(方法名字)
+            // 得到服务名(提供服务的类的名字)
             String serviceName = serviceRegistrationMetaData.getServiceName();
             // 得到服务的实现类
             Class<?> serviceImplementClass = serviceRegistrationMetaData.getServiceImplementClass();

@@ -6,7 +6,7 @@ import com.rpc.rpc_demo.config.RpcConfig;
 import com.rpc.rpc_demo.model.ServiceMetaData;
 import com.rpc.rpc_demo.registry.Registry;
 import com.rpc.rpc_demo.registry.RegistryFactory;
-import com.rpc.rpc_demo.registry.impl.LocalRegistry;
+import com.rpc.rpc_demo.registry.LocalRegistry;
 import com.rpc.rpc_demo.springboot.starter.annotation.RpcService;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

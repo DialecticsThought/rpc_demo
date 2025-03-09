@@ -3,7 +3,7 @@ package com.rpc.rpc_demo.communication.server;
 import com.rpc.rpc_demo.communication.protocol.*;
 import com.rpc.rpc_demo.model.RpcRequest;
 import com.rpc.rpc_demo.model.RpcResponse;
-import com.rpc.rpc_demo.registry.impl.LocalRegistry;
+import com.rpc.rpc_demo.registry.LocalRegistry;
 import io.vertx.core.Handler;
 import io.vertx.core.buffer.Buffer;
 import io.vertx.core.net.NetSocket;

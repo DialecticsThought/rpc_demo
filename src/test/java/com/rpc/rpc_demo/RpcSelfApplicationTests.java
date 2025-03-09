@@ -3,7 +3,6 @@ package com.rpc.rpc_demo;
 import cn.hutool.core.util.IdUtil;
 import com.rpc.rpc_demo.constant.RpcConstant;
 import com.rpc.rpc_demo.model.RpcRequest;
-import com.rpc.rpc_demo.protocol.*;
 import com.rpc.rpc_demo.serializer.Serializer;
 import com.rpc.rpc_demo.communication.protocol.*;
 import com.rpc.rpc_demo.spi.SPILoader;
@@ -15,7 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.Map;
 
 @SpringBootTest
-class RpcSelfApplicationTests {
+public class RpcSelfApplicationTests {
 
     @Test
     void contextLoads() {

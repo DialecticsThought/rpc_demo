@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ServiceRegistrationMetaData<T> {
     /**
-     * 服务名称(本质就是抽象类)
+     * 服务名称(本质就是提供服务的抽象类)
      */
     private String serviceName;
 

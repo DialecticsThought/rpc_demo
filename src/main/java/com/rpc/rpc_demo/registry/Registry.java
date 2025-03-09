@@ -12,14 +12,15 @@ import java.util.List;
  */
 public interface Registry {
     /**
-     * 初始化
+     * 对服务提供者和消费者都是共用的，用于初始化和关闭 zk/etcd 客户端资源
      * 一般是获取zk/etcd的客户端
+     *
      * @param registryConfig
      */
     void init(RegistryConfig registryConfig);
 
     /**
-     * 注册服务 服务端
+     * 服务提供者在启动时调用此方法将自己的服务信息注册到 etcd
      *
      * @param serviceMetaData
      * @throws Exception
@@ -27,14 +28,14 @@ public interface Registry {
     void register(ServiceMetaData serviceMetaData) throws Exception;
 
     /**
-     * 取消注册服务 服务端
+     * 服务提供者在下线或退出时调用此方法注销自己的服务
      *
      * @param serviceMetaData
      */
     void unRegister(ServiceMetaData serviceMetaData);
 
     /**
-     * 服务发现  获取某服务的所有节点  客户端 消费端
+     * 消费者在调用远程服务前通过该方法获取某个服务标识下所有可用的服务节点
      *
      * @param serviceIdentifier
      * @return
@@ -43,16 +44,17 @@ public interface Registry {
 
     /**
      * 服务销毁
+     * 对服务提供者和消费者都是共用的，用于初始化和关闭 zk/etcd 客户端资源
      */
     void destroy();
 
     /**
-     * 心跳检测
+     * 服务提供者定时调用续约操作
      */
     void heartbeat();
 
     /**
-     * 监听服务节点
+     * 消费者通过此方法对指定的服务节点进行监听，以便在服务变更（例如服务下线或更新）时及时清除本地缓存，获取最新的服务信息。
      */
     void watch(String serviceNodeIdentifier);
 }

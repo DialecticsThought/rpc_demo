@@ -1,10 +1,5 @@
-package com.rpc.rpc_demo.registry.impl;
+package com.rpc.rpc_demo.registry;
 
-import com.rpc.rpc_demo.config.RegistryConfig;
-import com.rpc.rpc_demo.model.ServiceMetaData;
-import com.rpc.rpc_demo.registry.Registry;
-
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
