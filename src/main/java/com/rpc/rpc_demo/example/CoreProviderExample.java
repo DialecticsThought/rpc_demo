@@ -15,6 +15,7 @@ import java.util.List;
  */
 public class CoreProviderExample {
     public static void main(String[] args) {
+        // 这里 服务提供者 只提供 UserServiceImpl服务
         List<ServiceRegistrationMetaData<?>> serviceRegisterInfos = new ArrayList<>();
         ServiceRegistrationMetaData serviceRegisterInfo =
                 new ServiceRegistrationMetaData(UserService.class.getName(), UserServiceImpl.class);

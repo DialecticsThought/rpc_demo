@@ -9,20 +9,20 @@ public class RetryStrategyIdentifier {
     /**
      * 不重试
      */
-    public static String NO = "no";
+    public static final String NO = "no";
 
     /**
      * 固定间隔重试
      */
-    public static String FIXED_INTERVAL = "fixedInterval";
+    public static final String FIXED_INTERVAL = "fixedInterval";
 
     /**
      * 线性退避重试
      */
-    public static String LINEAR = "linear";
+    public static final String LINEAR = "linear";
 
     /**
      * 指数退避重试
      */
-    public static String EXPONENTIAL_BACKOFF = "exponentialBackoff";
+    public static final String EXPONENTIAL_BACKOFF = "exponentialBackoff";
 }

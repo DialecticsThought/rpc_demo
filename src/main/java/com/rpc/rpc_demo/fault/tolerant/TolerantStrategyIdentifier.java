@@ -9,20 +9,20 @@ public class TolerantStrategyIdentifier {
     /**
      * 快速失败
      */
-    public static String FAIL_FAST = "failFast";
+    public static final String FAIL_FAST = "failFast";
 
     /**
      * 静默处理
      */
-    public static String FAIL_SAFE = "failSafe";
+    public static final String FAIL_SAFE = "failSafe";
 
     /**
      * 故障恢复
      */
-    public static String FAIL_BACK = "failBack";
+    public static final String FAIL_BACK = "failBack";
 
     /**
      * 故障转移
      */
-    public static String FAIL_OVER = "failOver";
+    public static final String FAIL_OVER = "failOver";
 }

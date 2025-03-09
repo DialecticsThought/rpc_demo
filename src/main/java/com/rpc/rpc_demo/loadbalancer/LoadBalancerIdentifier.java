@@ -9,20 +9,20 @@ public class LoadBalancerIdentifier {
     /**
      * 轮询
      */
-    public static String ROUND_ROBIN = "roundRobin";
+    public static final String ROUND_ROBIN = "roundRobin";
 
     /**
      * 随机
      */
-    public static String RANDOM = "random";
+    public static final String RANDOM = "random";
 
     /**
      * 一致性哈希
      */
-    public static String CONSISTENT_HASH = "consistentHash";
+    public static final String CONSISTENT_HASH = "consistentHash";
 
     /**
      * 加权轮询
      */
-    public static String WEIGHTED_ROUND_ROBIN = "weightedRoundRobin";
+    public static final String WEIGHTED_ROUND_ROBIN = "weightedRoundRobin";
 }
