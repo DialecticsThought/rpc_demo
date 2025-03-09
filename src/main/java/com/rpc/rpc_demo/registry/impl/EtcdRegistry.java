@@ -51,15 +51,18 @@ public class EtcdRegistry implements Registry {
      * 每一个元素形如： serviceName:serviceVersion/serviceHost:servicePort
      * 注意末尾有 "/"，例如： "testService:v1/127.0.0.1:8080"
      * 当注册成功后，将该 key 存入集合，用于后续的续约或注销
+     * 主要由 服务提供者 使用
      */
     private final Set<String> localRegisterNodeKeySet = new HashSet<>();
     /**
      * 注册中心缓存，用于缓存 serviceDiscovery 查询到的服务信息
+     * 主要由 消费者 使用，在调用 serviceDiscovery 方法时首先从缓存中获取服务列表；如果缓存没有，再从 etcd 查询后将结果写入缓存
      */
     private final RegisteredServiceCache registryServiceCache = new RegisteredServiceCache();
     /**
      * 监听的 key 集合，用于避免重复监听
      * 当我们对某个 serviceNodeIdentifier 设置 watch 后，将其加入本集合
+     * 主要由 消费者 使用
      */
     private final Set<String> watchingKeySet = new ConcurrentHashSet<>();
 
