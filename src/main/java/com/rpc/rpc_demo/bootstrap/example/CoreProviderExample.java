@@ -1,4 +1,4 @@
-package com.rpc.rpc_demo.example;
+package com.rpc.rpc_demo.bootstrap.example;
 
 import com.rpc.rpc_demo.bootstrap.ProviderBootstrap;
 import com.rpc.rpc_demo.model.ServiceRegistrationMetaData;
@@ -16,10 +16,13 @@ import java.util.List;
 public class CoreProviderExample {
     public static void main(String[] args) {
         // 这里 服务提供者 只提供 UserServiceImpl服务
-        List<ServiceRegistrationMetaData<?>> serviceRegisterInfos = new ArrayList<>();
-        ServiceRegistrationMetaData serviceRegisterInfo =
+        List<ServiceRegistrationMetaData<?>> serviceRegistrationMetaData = new ArrayList<>();
+
+        ServiceRegistrationMetaData registrationMetaData =
                 new ServiceRegistrationMetaData(UserService.class.getName(), UserServiceImpl.class);
-        serviceRegisterInfos.add(serviceRegisterInfo);
-        ProviderBootstrap.init(serviceRegisterInfos);
+
+        serviceRegistrationMetaData.add(registrationMetaData);
+
+        ProviderBootstrap.init(serviceRegistrationMetaData);
     }
 }

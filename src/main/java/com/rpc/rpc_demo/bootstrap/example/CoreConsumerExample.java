@@ -1,7 +1,8 @@
-package com.rpc.rpc_demo.example;
+package com.rpc.rpc_demo.bootstrap.example;
 
 import com.rpc.rpc_demo.bootstrap.ConsumerBootstrap;
 import com.rpc.rpc_demo.model.User;
+import com.rpc.rpc_demo.proxy.ServiceProxyFactory;
 import com.rpc.rpc_demo.v1.service.UserService;
 
 /**
@@ -10,13 +11,13 @@ import com.rpc.rpc_demo.v1.service.UserService;
  * @Data 2025/3/9 18:51
  */
 public class CoreConsumerExample {
-/*    public static void main(String[] args) {
+    public static void main(String[] args) {
         ConsumerBootstrap.init();
 
         // 获取 代理
         UserService userService = ServiceProxyFactory.getProxy(UserService.class);
         User user = new User();
-        user.setName("cxk");
+        user.setName("man!!!");
 
         User user1 = userService.getUser(user);
         if (user1 != null) {
@@ -24,5 +25,5 @@ public class CoreConsumerExample {
         } else {
             System.out.println("user==null");
         }
-    }*/
+    }
 }
