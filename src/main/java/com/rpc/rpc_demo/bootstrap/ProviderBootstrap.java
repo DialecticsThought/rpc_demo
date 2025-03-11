@@ -65,5 +65,7 @@ public class ProviderBootstrap {
         VertxTcpServer vertxTcpServer = new VertxTcpServer();
         // 调用 vertxTcpServer.doStart() 方法,并传入 RPC 配置中指定的服务端口,启动 TCP 服务端
         vertxTcpServer.doStart(RpcContext.getRpcConfig().getServerPort());
+
+        //TODO 定时续约
     }
 }

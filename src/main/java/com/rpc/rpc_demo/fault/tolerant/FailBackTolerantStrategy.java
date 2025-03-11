@@ -13,14 +13,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Description
- * 这种策略和故障恢复差不多，都是尝试其他服务，
- *      只不过这个在故障服务恢复正常后触发,目的是将流量切换回原来的服务实例
+ * @Description 这种策略和故障恢复差不多，都是尝试其他服务，
+ * 只不过这个在故障服务恢复正常后触发,目的是将流量切换回原来的服务实例
  * @Author veritas
  * @Data 2025/3/9 16:55
  */
 @Slf4j
-public class FailBackTolerantStrategy implements TolerantStrategy{
+public class FailBackTolerantStrategy implements TolerantStrategy {
     @Override
     public RpcResponse doTolerant(Map<String, Object> context, Exception e) {
         // 服务列表 用于容错策略

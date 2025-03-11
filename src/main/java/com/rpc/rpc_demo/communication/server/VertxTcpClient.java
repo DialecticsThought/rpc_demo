@@ -82,10 +82,10 @@ public class VertxTcpClient {
                 // 如果编码或发送过程中出现异常，则抛出运行时异常
                 throw new RuntimeException(e);
             }
-
             // 创建一个TCP缓冲区处理包装器，用于处理服务端返回的响应数据
             // 给包装类传入一个匿名实现类，这个匿名实现类的方法 是在当消息体数据接收完成后 执行的
             TcpBufferHandlerWrapper tcpBufferHandlerWrapper = new TcpBufferHandlerWrapper(new Handler<Buffer>() {
+                // buffer 是服务器返回的数据（字节流）。
                 @Override
                 public void handle(Buffer buffer) {
                     try {
@@ -100,6 +100,7 @@ public class VertxTcpClient {
                     }
                 }
             });
+
             // 将上面的处理器设置到socket上，用于处理接收到的数据
             socket.handler(tcpBufferHandlerWrapper);
         });
